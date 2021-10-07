@@ -1,0 +1,16 @@
+<h2 mat-dialog-title>Warning!</h2>
+<mat-dialog-content class="mat-typography">
+  <h3>Are you sure, you want to delete the employee?</h3>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button class="normal" mat-button mat-dialog-close>Cancel</button>
+  <button
+    class="delete"
+    mat-button
+    mat-dialog-close
+    (click)="deleteEmployee()"
+    cdkFocusInitial
+  >
+    Yes, delete
+  </button>
+</mat-dialog-actions>

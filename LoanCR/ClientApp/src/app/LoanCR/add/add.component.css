@@ -1,0 +1,13 @@
+.alert {
+  width: 50%;
+  margin: 5%;
+}
+form div {
+  margin-bottom: 1em;
+}
+input {
+  color: white;
+}
+label {
+  color: white;
+}

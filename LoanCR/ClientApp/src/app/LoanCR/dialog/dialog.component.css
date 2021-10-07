@@ -1,0 +1,11 @@
+h3,
+h2,
+p {
+  color: grey;
+}
+.normal {
+  background-color: grey;
+}
+.delete {
+  background-color: red;
+}

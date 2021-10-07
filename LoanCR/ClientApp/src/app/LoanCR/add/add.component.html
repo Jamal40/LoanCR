@@ -1,0 +1,53 @@
+<form [formGroup]="addForm" (ngSubmit)="addEmp()">
+  <div>
+    <mat-form-field color="accent" appearance="fill">
+      <mat-label>Enter your name</mat-label>
+      <input
+        matInput
+        placeholder="Enter your name"
+        formControlName="name"
+        required
+      />
+      <mat-error *ngIf="addForm.controls.name.errors?.required"
+        >You must enter a name</mat-error
+      >
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field color="accent" appearance="fill">
+      <mat-label>Enter your age</mat-label>
+      <input
+        type="number"
+        matInput
+        placeholder="Enter your age"
+        formControlName="age"
+        required
+      />
+      <mat-error *ngIf="addForm.controls.age.errors?.required"
+        >You must enter a name</mat-error
+      >
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field color="accent" appearance="fill">
+      <mat-label>Enter your job</mat-label>
+      <input
+        matInput
+        placeholder="Enter your job"
+        formControlName="job"
+        required
+      />
+      <mat-error *ngIf="addForm.controls.job.errors?.required"
+        >You must enter a name</mat-error
+      >
+    </mat-form-field>
+  </div>
+  <div>
+    <button [disabled]="this.addForm.invalid" mat-raised-button color="accent">
+      Add Employee
+    </button>
+  </div>
+</form>
+<div #alert class="alert alert-success alert-dismissible fade" role="alert">
+  <h4 class="alert-heading">Added Successfully</h4>
+</div>

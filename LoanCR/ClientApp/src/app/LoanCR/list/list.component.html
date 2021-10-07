@@ -1,0 +1,29 @@
+<div class="container">
+  <button class="btn btn-success btnAdd" [routerLink]="['/add']">Add</button>
+  <table class="table table-dark table-bordered">
+    <tbody>
+      <tr class="table-primary text-dark">
+        <th>ID</th>
+        <th>Name</th>
+        <th>Job</th>
+        <th>Age</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+      <tr class="table-active" *ngFor="let emp of empList">
+        <td>{{ emp.id }}</td>
+        <td>{{ emp.name }}</td>
+        <td>{{ emp.job }}</td>
+        <td>{{ emp.age }}</td>
+        <td>
+          <button class="btn btn-warning" (click)="Edit(emp)">Edit</button>
+        </td>
+        <td>
+          <button class="btn btn-danger" (click)="Delete(emp.id)">
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
