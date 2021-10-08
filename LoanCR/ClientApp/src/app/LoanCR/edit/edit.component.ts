@@ -28,7 +28,6 @@ export class EditComponent implements OnInit {
   ngOnInit() {
     this.employeeService.employeeEdited$.subscribe((notification) => {
       this.employeeToEdit = notification;
-      console.log(notification);
       if (this.employeeToEdit !== null) {
         this.editForm.patchValue(this.employeeToEdit);
       }

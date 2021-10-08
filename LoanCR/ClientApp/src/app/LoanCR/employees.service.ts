@@ -21,7 +21,6 @@ export class EmployeesService {
   }
 
   UpdateEmp(editedEmp: any) {
-    console.log("eee", editedEmp);
     return this.http.put(this.baseUrl + "api/index/" + editedEmp.id, editedEmp);
   }
 
