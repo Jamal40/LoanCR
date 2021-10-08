@@ -20,10 +20,9 @@ import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
 import { MatButtonModule } from "@angular/material/button";
 import { MatSnackBarModule } from "@angular/material/snack-bar";
-import { SuccessSnackBarComponent } from "./LoanCR/success-snack-bar/success-snack-bar.component";
+import { GeneralSnackBarComponent } from "./LoanCR/success-snack-bar/success-snack-bar.component";
 import { DialogComponent } from "./LoanCR/dialog/dialog.component";
 import { MatDialogModule } from "@angular/material/dialog";
-import { DeleteSnackBarComponent } from "./LoanCR/delete-snack-bar/delete-snack-bar.component";
 import { AppRoutingModule } from "./app-routing-module";
 
 @NgModule({
@@ -36,8 +35,7 @@ import { AppRoutingModule } from "./app-routing-module";
     ListComponent,
     AddComponent,
     EditComponent,
-    SuccessSnackBarComponent,
-    DeleteSnackBarComponent,
+    GeneralSnackBarComponent,
     DialogComponent,
   ],
   imports: [
@@ -55,10 +53,6 @@ import { AppRoutingModule } from "./app-routing-module";
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [
-    SuccessSnackBarComponent,
-    DialogComponent,
-    DeleteSnackBarComponent,
-  ],
+  entryComponents: [GeneralSnackBarComponent, DialogComponent],
 })
 export class AppModule {}

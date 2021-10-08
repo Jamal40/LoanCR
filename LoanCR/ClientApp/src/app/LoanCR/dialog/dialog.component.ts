@@ -3,8 +3,7 @@ import { MAT_DIALOG_DATA } from "@angular/material/dialog";
 import { Router } from "@angular/router";
 import { EmployeesService } from "../employees.service";
 import { MatSnackBar } from "@angular/material/snack-bar";
-import { DeleteSnackBarComponent } from "../delete-snack-bar/delete-snack-bar.component";
-import { SuccessSnackBarComponent } from "../success-snack-bar/success-snack-bar.component";
+import { GeneralSnackBarComponent } from "../success-snack-bar/success-snack-bar.component";
 
 @Component({
   selector: "app-dialog",
@@ -25,7 +24,7 @@ export class DialogComponent implements OnInit {
     this.empService.deleteEmp(this.data).subscribe(
       () => {
         this.router.navigate(["/all"]);
-        this.snackBar.openFromComponent(SuccessSnackBarComponent, {
+        this.snackBar.openFromComponent(GeneralSnackBarComponent, {
           data: {
             message: "Employee has been deleted successfully",
             color: "red",

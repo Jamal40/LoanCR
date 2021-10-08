@@ -7,7 +7,7 @@ import { FormControl, FormGroup, Validators } from "@angular/forms";
 
 //Anglar Material Imports
 import { MatSnackBar } from "@angular/material/snack-bar";
-import { SuccessSnackBarComponent } from "../success-snack-bar/success-snack-bar.component";
+import { GeneralSnackBarComponent } from "../success-snack-bar/success-snack-bar.component";
 
 @Component({
   selector: "app-add",
@@ -38,7 +38,7 @@ export class AddComponent implements OnInit {
   ngOnInit() {}
 
   openSnackBar() {
-    this._snackBar.openFromComponent(SuccessSnackBarComponent, {
+    this._snackBar.openFromComponent(GeneralSnackBarComponent, {
       duration: 3000,
       data: {
         message: "Employee has been added successfully.",

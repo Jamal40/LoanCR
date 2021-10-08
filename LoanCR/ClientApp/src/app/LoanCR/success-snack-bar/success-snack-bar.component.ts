@@ -2,11 +2,11 @@ import { Component, Inject, OnInit } from "@angular/core";
 import { MAT_SNACK_BAR_DATA } from "@angular/material/snack-bar";
 
 @Component({
-  selector: "app-success-snack-bar",
-  templateUrl: "./success-snack-bar.component.html",
-  styleUrls: ["./success-snack-bar.component.css"],
+  selector: "app-general-snack-bar",
+  templateUrl: "./general-snack-bar.component.html",
+  styleUrls: ["./general-snack-bar.component.css"],
 })
-export class SuccessSnackBarComponent implements OnInit {
+export class GeneralSnackBarComponent implements OnInit {
   constructor(@Inject(MAT_SNACK_BAR_DATA) public data: any) {}
 
   ngOnInit() {}

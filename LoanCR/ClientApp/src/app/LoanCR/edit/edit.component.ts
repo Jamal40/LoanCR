@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { FormControl, FormGroup, Validators } from "@angular/forms";
 import { EmployeesService } from "../employees.service";
 import { MatSnackBar } from "@angular/material/snack-bar";
-import { SuccessSnackBarComponent } from "../success-snack-bar/success-snack-bar.component";
+import { GeneralSnackBarComponent } from "../success-snack-bar/success-snack-bar.component";
 import { Router } from "@angular/router";
 
 @Component({
@@ -39,7 +39,7 @@ export class EditComponent implements OnInit {
     }
     this.employeeService.UpdateEmp(this.editForm.getRawValue()).subscribe(
       () => {
-        this.snackBar.openFromComponent(SuccessSnackBarComponent, {
+        this.snackBar.openFromComponent(GeneralSnackBarComponent, {
           data: {
             message: "Employee has been edited successfully.",
             color: "rgb(16, 218, 16)",

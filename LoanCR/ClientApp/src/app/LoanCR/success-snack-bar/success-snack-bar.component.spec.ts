@@ -1,25 +1,24 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { SuccessSnackBarComponent } from './success-snack-bar.component';
+import { GeneralSnackBarComponent } from "./success-snack-bar.component";
 
-describe('SuccessSnackBarComponent', () => {
-  let component: SuccessSnackBarComponent;
-  let fixture: ComponentFixture<SuccessSnackBarComponent>;
+describe("GeneralSnackBarComponent", () => {
+  let component: GeneralSnackBarComponent;
+  let fixture: ComponentFixture<GeneralSnackBarComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SuccessSnackBarComponent ]
-    })
-    .compileComponents();
+      declarations: [GeneralSnackBarComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SuccessSnackBarComponent);
+    fixture = TestBed.createComponent(GeneralSnackBarComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });
