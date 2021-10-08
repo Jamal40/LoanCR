@@ -40,7 +40,10 @@ export class EditComponent implements OnInit {
     this.employeeService.UpdateEmp(this.editForm.getRawValue()).subscribe(
       () => {
         this.snackBar.openFromComponent(SuccessSnackBarComponent, {
-          data: "Employee has been edited successfully.",
+          data: {
+            message: "Employee has been edited successfully.",
+            color: "rgb(16, 218, 16)",
+          },
           duration: 3000,
         });
         this.router.navigate(["./all"]);

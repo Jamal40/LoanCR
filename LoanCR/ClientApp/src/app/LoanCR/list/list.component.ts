@@ -41,7 +41,6 @@ export class ListComponent implements OnInit {
   Delete(id: number) {
     const dialogRef = this.dialog.open(DialogComponent, {
       data: id,
-      panelClass: "redbk",
     });
 
     dialogRef.afterClosed().subscribe((result) => {

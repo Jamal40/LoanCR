@@ -40,7 +40,10 @@ export class AddComponent implements OnInit {
   openSnackBar() {
     this._snackBar.openFromComponent(SuccessSnackBarComponent, {
       duration: 3000,
-      data: "Employee has been added successfully",
+      data: {
+        message: "Employee has been added successfully.",
+        color: "rgb(16, 218, 16)",
+      },
     });
   }
 
