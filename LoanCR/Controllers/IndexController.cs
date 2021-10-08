@@ -51,8 +51,18 @@ namespace PortalWebiApiWithAngular.Controllers
         public IActionResult Post(EmployeeAddVM empVM)
         {
             Employee emp = _mapper.Map<Employee>(empVM);
-            Random random = new Random();
-            emp.id = random.Next(1, 1000);
+
+            //Making sure that the generated Id is unique
+            var unique = false;
+            var newId = 0;
+            while (!unique)
+            {
+                Random random = new Random();
+                newId = random.Next(1, 1000);
+                unique = !EmpList.Any(e => e.id == newId);
+            }
+            emp.id = newId;
+
             EmpList.Add(emp);
             return Ok();
         }
